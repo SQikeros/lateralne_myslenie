@@ -6,7 +6,6 @@ class AboutAuthorTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('O Autorze'), centerTitle: true, elevation: 0, backgroundColor: const Color(0xFF6366F1), foregroundColor: Colors.white),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [const Color(0xFF6366F1).withOpacity(0.1), Colors.white]),
@@ -17,7 +16,7 @@ class AboutAuthorTab extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(20, 20, 20, 100),
             child: Column(
               children: [
-                const SizedBox(height: 20),
+                const SizedBox(height: 40),
                 Container(
                   width: 140,
                   height: 140,
@@ -34,7 +33,7 @@ class AboutAuthorTab extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 24),
-                const Text('Grzegorz Patyński', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+                const Text('Grzesiek', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -64,8 +63,7 @@ class AboutAuthorTab extends StatelessWidget {
                         ),
                         const SizedBox(height: 16),
                         const Text(
-                          'Siemanko! Jestem programistą Flutter od dłuższego czasu i rozwijam się w czym mogę. '
-                          'Często programuje, więc stworzyłem tą aplikacje bo niewiem co można było innego zrobić :(',
+                          'Siemanko! Od dłuższego czasu tworzę aplikacje we Flutterze i rozwijam się we wszystkim, co mogę. Często programuję, więc stworzyłem tę aplikację, bo nie wiedziałem, co innego mógłbym zrobić.',
                           style: TextStyle(fontSize: 15, height: 1.6),
                         ),
                       ],

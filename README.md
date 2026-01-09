@@ -277,7 +277,7 @@ After using this app, users will be able to:
 
 ## 👨‍💻 Author
 
-**Grzegorz Patyński**
+**Grzesiek**
 - Flutter Developer
 - Engineering Thesis Project
 - Contact: [Your Email/LinkedIn]

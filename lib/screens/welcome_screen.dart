@@ -32,57 +32,59 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [const Color(0xFF6366F1), const Color(0xFF8B5CF6), const Color(0xFFEC4899)],
-          ),
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [Color(0xFF6366F1), Color(0xFF8B5CF6), Color(0xFFEC4899)]),
         ),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(24.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                FadeTransition(
-                  opacity: _fadeAnimation,
-                  child: SlideTransition(
-                    position: _slideAnimation,
-                    child: Column(
-                      children: [
-                        const Icon(Icons.lightbulb_outline, size: 100, color: Colors.white),
-                        const SizedBox(height: 32),
-                        const Text(
-                          'Techniki\nLateralnego\nMyślenia',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold, color: Colors.white, height: 1.2),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Column(
+            children: [
+              const Spacer(),
+
+              FadeTransition(
+                opacity: _fadeAnimation,
+                child: SlideTransition(
+                  position: _slideAnimation,
+                  child: Column(
+                    children: [
+                      const Icon(Icons.lightbulb_outline, size: 110, color: Colors.white),
+                      const SizedBox(height: 32),
+                      const Text(
+                        'Techniki\nLateralnego\nMyślenia',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold, color: Colors.white, height: 1.2),
+                      ),
+                      const SizedBox(height: 16),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                        decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), borderRadius: BorderRadius.circular(20)),
+                        child: const Text(
+                          'Autor: Grzesiek',
+                          style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w500),
                         ),
-                        const SizedBox(height: 16),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                          decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), borderRadius: BorderRadius.circular(20)),
-                          child: const Text(
-                            'Autor: Grzegorz Patyński',
-                            style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w500),
-                          ),
-                        ),
-                        const SizedBox(height: 48),
-                        const Text(
-                          'Odkryj nowe sposoby myślenia\nprzez interaktywne wyzwania',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 18, color: Colors.white, height: 1.5),
-                        ),
-                      ],
-                    ),
+                      ),
+                      const SizedBox(height: 40),
+                      const Text(
+                        'Odkryj nowe sposoby myślenia\nprzez interaktywne wyzwania',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 18, color: Colors.white, height: 1.5),
+                      ),
+                    ],
                   ),
                 ),
-                const SizedBox(height: 64),
-                FadeTransition(
-                  opacity: _fadeAnimation,
+              ),
+
+              const Spacer(),
+
+              FadeTransition(
+                opacity: _fadeAnimation,
+                child: Padding(
+                  padding: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom + 24),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const MainScreen()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const MainScreen()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
@@ -101,8 +103,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

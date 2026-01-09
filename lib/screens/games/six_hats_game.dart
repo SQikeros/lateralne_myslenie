@@ -113,7 +113,7 @@ class _SixHatsGameState extends State<SixHatsGame> with SingleTickerProviderStat
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Six Thinking Hats'), backgroundColor: const Color(0xFF3B82F6), foregroundColor: Colors.white),
+      appBar: AppBar(title: const Text('Six Thinking Hats'), backgroundColor: const Color(0xFF10B981), foregroundColor: Colors.white),
       body: SafeArea(
         bottom: false,
         child: SingleChildScrollView(
@@ -122,7 +122,7 @@ class _SixHatsGameState extends State<SixHatsGame> with SingleTickerProviderStat
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Card(
-                color: const Color(0xFF3B82F6).withOpacity(0.1),
+                color: const Color(0xFF10B981).withOpacity(0.1),
                 child: Padding(
                   padding: const EdgeInsets.all(16),
                   child: Column(
@@ -130,7 +130,7 @@ class _SixHatsGameState extends State<SixHatsGame> with SingleTickerProviderStat
                     children: [
                       Row(
                         children: [
-                          const Icon(Icons.psychology, color: Color(0xFF3B82F6)),
+                          const Icon(Icons.psychology, color: Color(0xFF10B981)),
                           const SizedBox(width: 8),
                           const Expanded(
                             child: Text('6 Kapeluszy Myślenia', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
