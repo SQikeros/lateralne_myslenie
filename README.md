@@ -280,13 +280,6 @@ After using this app, users will be able to:
 **Grzesiek**
 - Flutter Developer
 - Engineering Thesis Project
-- Contact: [Your Email/LinkedIn]
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
